@@ -1,0 +1,153 @@
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d7d7d7; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px;
+    margin: 0; /* Elimina el margen predeterminado */
+    background-size: cover;
+}
+
+h1 {
+color: #7a20be;
+    text-align: center; /* Centra el texto */
+    padding: 20px 0; /* Añade espacio interno */
+    font-size: 50px; /* Tamaño de fuente más grande */
+    margin-top: 0; /* Elimina el margen superior predeterminado */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo del formulario con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*width: 500px;
+    height: 300px;*/
+}
+
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group label span {
+    color: red;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6d4194;
+    border-radius: 5px;
+    background-color: #ffffffa8;
+    color: #000000;
+  }
+  
+  .form-group input::placeholder {
+    color: #777;
+  }
+  
+  /* Estilos para organizar los campos Nombre y Apellido en una fila */
+  .form-group:nth-child(1),
+  .form-group:nth-child(2),
+  .form-group:nth-child(3),
+  .form-group:nth-child(4) {
+    display: inline-block;
+    width: 38%;
+  }
+  
+  .form-group:nth-child(1) {
+    margin-right: 10%;
+  }
+
+  .form-group:nth-child(3) {
+    margin-right: 10%;
+  }
+
+label {
+    display: flex;
+    margin-bottom: 10px;
+    color: #7550FF; /* Color del texto de las etiquetas */
+    align-items: stretch;
+    
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 6px 0px 6px 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+input {
+    display: flex;
+    align-items: stretch;
+     
+}
+
+.extra-fields {
+    display: none;
+}
+
+button {
+    background-color: #7a20be; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #510163; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilo para la imagen de fondo */
+.background-image {
+    position: fixed; /* Fija la posición de la imagen de fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca la imagen detrás de todo */
+}
+
+/* Estilo para el icono en la esquina izquierda */
+.icono {
+    position: absolute;
+    top: 30px; /* Ajusta la posición vertical del icono */
+    left: 30px; /* Ajusta la posición horizontal del icono */
+    width: 80px; /* Ajusta el ancho del icono */
+    height: 100px; /* Ajusta la altura del icono */
+    background-image: url('icono1.png'); /* Reemplaza 'icono.png' con el nombre de tu imagen descargada */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Coloca el icono encima del formulario */
+}
+
+.extra-fields {
+    display: none;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.button-container button {
+    margin: 0 10px;
+}
+
+.error {
+    color: rgb(196, 9, 9);
+    font-size: 10px;
+}

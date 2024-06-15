@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINTOKLIN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="icono"></div> <!-- Icono en la esquina izquierda -->
+    <h1>REGISTRO</h1>
+    <form id="tintoreriaForm" class="form-container" onsubmit="return validateForm()">
+
+
+        <div class="form-group">
+            <label for="nombre">Nombre<span>*</span></label>
+            <input type="text" id="nombre" name="nombre" required placeholder="nombre" oninput="validateText('nombre')">
+            <span id="nombreError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="apellido">Apellido<span>*</span></label>
+            <input type="text" id="apellido" name="apellido" required placeholder="apellido" oninput="validateText('apellido')">
+            <span id="apellidoError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Email<span>*</span></label>
+            <input type="email" id="correo" name="correo" required placeholder="correo electronico" oninput="validateEmail()">
+            <span id="correoError" class="error"></span>
+        </div>
+
+        <div class="form-group">   
+            <label for="telefono">Teléfono<span>*</span></label>
+            <input type="text" id="telefono" name="telefono" required placeholder="telefono" oninput="validateNumber('telefono')">
+            <span id="telefonoError" class="error"></span>
+        </div>
+
+            <!--<input type="checkbox" id="domicilio" name="domicilio">
+            <label for="domicilio">Servicio a domicilio</label>-->
+        
+        <div class="extra-fields">
+
+            <div class="form-group">
+                <label for="calle">Calle<span>*</span></label>
+                <input type="text" id="calle" name="calle" placeholder="calle">
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Número exterior:<span>*</span></label>
+                <input type="text" id="numeroext" name="numero exterior" placeholder="numero exterior" oninput="validateNumber('numeroext')">
+                <span id="numeroextError" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="numero">Número interior</label>
+                <input type="text" id="numeroint" name="numero interior" placeholder="numero interior" oninput="validateNumber('numeroint')">
+                <span id="numerointError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="cp">Código Postal<span>*</span></label>
+                <input type="text" id="cp" name="codigo postal" placeholder="codigo postal" oninput="validateNumber('codigopostal')">
+                <span id="codigopostalError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="delegacion">Delegación<span>*</span></label>
+                <input type="text" id="delegacion" name="delegacion" placeholder="delegacion" oninput="validateText('delegacion')">
+                <span id="delegacionError" class="error"></span>>
+            </div>
+
+            <div class="form-group">
+                <label for="colonia">Colonia<span>*</span>
+                    <!--<select>
+                        <option value="08000">Ramos Millan</option>
+                        <option value="08400">Granjas Mexico</option>
+                        <option value="08510">El Rodeo</option>
+                    </select>-->
+                </label>
+                <input type="text" id="colonia" name="colonia" placeholder="seleccione colonia" oninput="validateText('colonia')">
+                <span id="coloniaError" class="error"></span>>        
+        
+            </div>        
+        </div>
+        
+        <button type="button" id="mostrarCampos">Registrar</button>
+        <button type="button" id="llenarDomicilio">Agregar domicilio</button>
+    </form>
+    <div class="background-image"></div> <!-- Imagen de fondo detrás del formulario -->
+    
+    <script>
+        document.getElementById("mostrarCampos").addEventListener("click", function() {
+            var camposExtra = document.querySelector(".extra-fields");
+            if (document.getElementById("domicilio").checked) {
+                camposExtra.style.display = "block";
+            }
+        });
+
+        document.getElementById("llenarDomicilio").addEventListener("click", function() {
+            var camposExtra = document.querySelector(".extra-fields");
+            camposExtra.style.display = "block";
+        });
+    </script>
+</body>
+</html>
